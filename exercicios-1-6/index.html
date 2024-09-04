@@ -1,0 +1,79 @@
+<!--
+  Hit RUN to see this project in action!
+  
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main id="root"></main>
+
+    <script type="module" src="script.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const root = document.getElementById("root");
+      
+      const h1 = React.createElement(
+        "h1",
+        { className: "title" },
+        "Hello, World!",
+      );
+      const p = React.createElement(
+        "p",
+        { className: "description" },
+        "Bem vindo ao React",
+      );
+
+      const section = React.createElement(
+        "section",
+        {className: 'grid'},
+      )
+
+      const a = React.createElement(
+        'a',
+        {
+          href : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs',
+          target : 'blank'
+        },
+        React.createElement(
+          'h2',
+          null,
+          'Bruno'
+        ),
+        React.createElement(
+          'p',
+          null,
+          'Esse link te leva para uma das melhores músicas de todos os tempos'
+        )
+      )
+
+      
+      
+      const App = React.createElement(
+        React.Fragment,
+        null,
+        h1,
+        p,
+        a
+      )
+
+      ReactDOM.render(App, root);
+      
+    </script>
+  </body>
+</html>
