@@ -1,14 +1,13 @@
-function User({ user }) {
+function UserDetails({ user }) {
   return (
-    <li>
+    <div>
       <h2>{user.name.firstname}:</h2>
       <p>Nickname: {user.username}</p>
       <p>Cidade: {user.address.city}</p>
       <p>Telefone: {user.phone}</p>
       <p>E-mail: {user.email}</p>
-      <p>Senha: {user.password}</p>
-    </li>
+    </div>
   );
 }
 
-export default User;
+export default UserDetails;
